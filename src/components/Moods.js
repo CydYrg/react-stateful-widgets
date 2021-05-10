@@ -53,7 +53,7 @@ export default function Moods() {
     fontSize: '1.5em',
     marginBottom: '0.3em',
     color: 'crimson', 'royalblue':
-  };
+  }; /*Why it is giving me this error?*/
 
   return (
     <div className='widget-moods container'>
