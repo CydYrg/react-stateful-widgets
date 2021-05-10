@@ -35,9 +35,11 @@ STEP 6:
 */
 
 import React from 'react'; /* STEP 0 */
+import React, { useState } from "react";
 
-export default function Input() {
-  /* STEP 1 */
+export default function Input(props) {
+  const [inputValue, setInputValue] = useState();
+
 
   const changeInput = evt => {
     // When the input changes, its whole value can be found inside the event object.
@@ -53,7 +55,7 @@ export default function Input() {
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
+    color: 'royalblue', 'crimson',
   };
 
   return (
