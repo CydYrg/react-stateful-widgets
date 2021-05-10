@@ -85,7 +85,7 @@ return (
     <div className='widget-counter container'>
       <h2>Counter</h2>
       <div id='count' style={style}>
-        Number {count} is even ${`if count is even number, then string "even", else string "odd"`}
+        Number {count} is even {`if count is even number, then string "even", else string "odd"`}
       </div>
       <div>
         <button id='increment' onClick={increment}>Increment</button>
