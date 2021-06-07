@@ -47,9 +47,19 @@ STEP 6:
 */
 
 import React from 'react'; /* STEP 0 */
+import { render } from "react-dom";
 
-export default function Counter() {
+export default function Counter(props) {
   /* STEP 1 */
+
+  const [count, setCount] = useState(0);
+  return (
+    <div className= "widget-counter container">
+      <h2>Counter</h2>
+      <div>The count is {count} </div>
+      <button>increase</button>
+    </div>
+  )
 
   const increment = () => {
     /* STEP 4 */
