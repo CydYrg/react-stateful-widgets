@@ -47,8 +47,8 @@ STEP 6:
 */
 
 import React from 'react'; /* STEP 0 */
-import { render } from "react-dom";
-import { useState } from "react-dom";
+//import { render } from "react-dom"; // DO I NEED TO KEEP THEM BOTH? WHY MY COUNTER NOT WORKING?
+import { useState } from 'react-dom';
 
 export default function Counter(props) {
   /* STEP 1 */
