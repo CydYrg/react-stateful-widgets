@@ -47,24 +47,43 @@ STEP 6:
 */
 
 import React from 'react'; /* STEP 0 */
+//import { render } from "react-dom"; // DO I NEED TO KEEP THEM BOTH? WHY MY COUNTER NOT WORKING?
+import { useState } from 'react-dom';
 
-export default function Counter() {
+export default function Counter(props) {
   /* STEP 1 */
+
+  const [count, setCount] = useState(0);
+  return (
+    <div className= "widget-counter container">
+      <h2>Counter</h2>
+      <div>The count is {count} </div>
+      <button onClick={(event) => {
+        setCount(count +1);
+      }}> 
+      increase 
+      </button>
+
+    </div>
+  )
 
   const increment = () => {
     /* STEP 4 */
+    setCount(count + 1);
   };
   const decrement = () => {
     /* STEP 5 */
+    setCount(count -1);
   };
   const reset = () => {
     /* STEP 6 */
+    setCount(count =0);
   };
 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: 'royalblue', /* STEP 2 */
+    color: 'royalblue', crimson/* STEP 2 */
   };
 
   return (
@@ -72,6 +91,7 @@ export default function Counter() {
       <h2>Counter</h2>
       <div id='count' style={style}>
         Number 0 is even {/* STEP 3 */}
+        Number {count} is even ${`if count is even number, then string "even, else string "odd"`}
       </div>
       <div>
         <button id='increment' onClick={increment}>Increment</button>
